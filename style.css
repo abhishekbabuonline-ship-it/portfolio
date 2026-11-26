@@ -2609,3 +2609,31 @@ img, video { display: block; max-width: 100%; }
 
 /* Tools background video — half as visible */
 .toolkit-video { opacity: 0.27; }
+
+/* contact link icons */
+.link-row { grid-template-columns: 64px 1fr auto 70px; }
+.lr-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 222, 0, 0.08);
+    border: 1px solid rgba(255, 222, 0, 0.35);
+    color: var(--yellow);
+    transition: background 0.35s, color 0.35s, border-color 0.35s, transform 0.5s var(--ease);
+}
+.lr-icon svg { width: 28px; height: 28px; }
+.link-row:hover .lr-icon { background: #000; border-color: #000; color: var(--yellow); transform: rotate(-8deg) scale(1.06); }
+
+@media (max-width: 700px) {
+    .link-row { grid-template-columns: 46px 1fr 44px; }
+    .lr-icon { width: 44px; height: 44px; border-radius: 12px; grid-row: 1 / span 2; }
+    .lr-icon svg { width: 22px; height: 22px; }
+}
+@media (min-width: 701px) {
+    .link-row { grid-template-columns: 76px 1fr auto 70px; }
+    .lr-icon { width: 68px; height: 68px; border-radius: 20px; }
+    .lr-icon svg { width: 34px; height: 34px; }
+}
