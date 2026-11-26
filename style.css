@@ -2676,3 +2676,8 @@ img, video { display: block; max-width: 100%; }
 .project-media .project-video { transform: scale(1.07); }
 .project-card:hover .project-video { transform: scale(1.1); }
 .vimeo-preview iframe { transform: scale(1.07); }
+
+/* reel poster sits under the Vimeo player until it starts */
+.reel-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel-frame .reel-vimeo { z-index: 1; }
+.reel-frame .ai-badge, .reel-frame .reel-play { z-index: 3; }

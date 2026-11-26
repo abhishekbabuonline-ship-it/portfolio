@@ -50,6 +50,13 @@ const PROJECTS = {
     "creatives": []
 };
 
+/* The showreel shown in the "Explore my works" frame */
+const SHOWREEL = {
+    title: "Showreel", client: "Abhishek Babu", format: "h",
+    vimeo: "1250312983", hash: "ac6c265141",
+    thumb: "https://i.vimeocdn.com/video/2230918712-3c6e47704915b9fe09393be3867c52f1e9602daafa988ee50c439e8e24bef889-d_1280"
+};
+
 /* VIMEO projects: add  vimeo: "VIDEO_ID", hash: "h=VALUE from the embed link" (only for unlisted videos),
    thumb: "thumbnail url" (optional)  instead of src. */
 
@@ -789,6 +796,7 @@ if (reel) {
     update();
 
     playBtn.addEventListener("click", () => {
+        if (playBtn.dataset.open === "showreel") { openLightbox(SHOWREEL); return; }
         const [folder, idx] = playBtn.dataset.open.split(":");
         const proj = (PROJECTS[folder] || [])[+idx];
         if (proj) openLightbox(proj);
