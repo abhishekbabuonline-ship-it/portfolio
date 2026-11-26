@@ -76,7 +76,7 @@ document.querySelectorAll(".split").forEach((el) => {
     el.textContent = "";
     [...text].forEach((ch, i) => {
         const s = document.createElement("span");
-        s.className = "char";
+        s.className = ch === " " ? "char space" : "char";
         s.style.setProperty("--i", i);
         s.textContent = ch === " " ? " " : ch;
         el.appendChild(s);

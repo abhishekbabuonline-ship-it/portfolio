@@ -2382,3 +2382,105 @@ img, video { display: block; max-width: 100%; }
     margin-bottom: 4px;
 }
 .experience-item .exp-place { color: #e6e6e6; font-size: 12px; }
+
+
+/* =========================================================
+   TOOLS I USE — softwares + AI tools, all white
+========================================================= */
+
+.toolkit-inner { justify-content: flex-start; gap: 0; }
+.toolkit-section .section-heading { margin-bottom: 60px; }
+.tools-title { white-space: nowrap; }
+
+.tool-group + .tool-group { margin-top: 56px; }
+
+.tool-group-title {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.tool-group-title::after { content: ""; flex: 1; height: 1px; background: rgba(255,255,255,0.15); }
+
+.tool-grid { display: grid; gap: 14px; }
+.tool-grid-soft { grid-template-columns: repeat(7, 1fr); }
+.tool-grid-ai { grid-template-columns: repeat(5, 1fr); }
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 26px 10px 22px;
+    border-radius: 16px;
+    background: rgba(10, 10, 10, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.4s var(--ease), border-color 0.3s, background 0.3s;
+}
+
+.tool:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.45); background: rgba(20,20,20,0.6); }
+
+.tool-logo {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* every logo rendered as a plain white mark */
+.tool-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* fallback monogram, shown only if a logo fails to load */
+.tool-logo b {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+.tool-logo b:only-child { display: flex; }
+
+.tool-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 1000px) {
+    .tool-grid-soft { grid-template-columns: repeat(4, 1fr); }
+    .tool-grid-ai { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 700px) {
+    .tools-title { white-space: normal; }
+    .tool-grid-soft, .tool-grid-ai { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .tool { padding: 18px 6px 16px; gap: 10px; }
+    .tool-logo, .tool-logo b { width: 34px; height: 34px; }
+    .tool-name { font-size: 11px; }
+}
+
+/* hero headline — more breathing room between letters and words */
+.hero-title { letter-spacing: -0.025em; line-height: 0.98; }
+.hero-title .char.space { width: 0.3em; }
+.hero-title .amp { margin-right: 0.18em; }
