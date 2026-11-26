@@ -2339,3 +2339,7 @@ img, video { display: block; max-width: 100%; }
     .about-body { grid-template-columns: 1fr; }
     .about-body .experience { margin-top: 40px; }
 }
+
+/* contact heading sized to clear the Let's Talk circle */
+.contact-content h2 { font-size: clamp(48px, 7.2vw, 118px); max-width: calc(100% - 300px); }
+@media (max-width: 1000px) { .contact-content h2 { max-width: none; font-size: clamp(44px, 11vw, 100px); } }
