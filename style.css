@@ -2663,3 +2663,16 @@ img, video { display: block; max-width: 100%; }
     .grid-h { grid-template-columns: 1fr; }
     .grid-v { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 12px; }
 }
+
+/* AI label moved off the top-right corner, where brand logos usually sit */
+.project-media .ai-badge,
+.grid-v .project-media .ai-badge { top: auto; right: auto; bottom: 10px; left: 10px; }
+.reel-frame .ai-badge { top: 18px; right: auto; left: 18px; }
+@media (max-width: 700px) {
+    .project-media .ai-badge { bottom: 8px; left: 8px; }
+}
+
+/* crop thin black bands at the edges of thumbnails / previews */
+.project-media .project-video { transform: scale(1.07); }
+.project-card:hover .project-video { transform: scale(1.1); }
+.vimeo-preview iframe { transform: scale(1.07); }
