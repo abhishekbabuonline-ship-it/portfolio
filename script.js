@@ -723,37 +723,6 @@ if (skillPreview && !isTouch) {
 }
 
 
-/* ---------- LIGHTS OFF — flashlight mode ---------- */
-
-const lightsBtn = document.querySelector(".lights-toggle");
-const flashlight = document.querySelector(".flashlight");
-
-if (lightsBtn && flashlight) {
-    const moveLight = (x, y) => {
-        flashlight.style.setProperty("--fx", `${x}px`);
-        flashlight.style.setProperty("--fy", `${y}px`);
-    };
-    moveLight(innerWidth / 2, innerHeight / 2);
-
-    window.addEventListener("mousemove", (e) => moveLight(e.clientX, e.clientY), { passive: true });
-    window.addEventListener("touchmove", (e) => {
-        const t = e.touches[0];
-        if (t) moveLight(t.clientX, t.clientY);
-    }, { passive: true });
-
-    lightsBtn.addEventListener("click", () => {
-        const off = document.body.classList.toggle("lights-off");
-        lightsBtn.setAttribute("aria-pressed", String(off));
-    });
-
-    /* press "L" to toggle too */
-    document.addEventListener("keydown", (e) => {
-        if (e.key.toLowerCase() === "l" && !e.metaKey && !e.ctrlKey &&
-            !/input|textarea/i.test(e.target.tagName)) lightsBtn.click();
-    });
-}
-
-
 /* ---------- TAB TITLE EASTER EGG ---------- */
 
 const baseTitle = document.title;
