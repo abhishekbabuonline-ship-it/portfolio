@@ -2371,3 +2371,14 @@ img, video { display: block; max-width: 100%; }
     -webkit-text-fill-color: var(--yellow);
     color: var(--yellow);
 }
+
+/* experience: role (yellow) + place (white) */
+.experience-item .exp-role {
+    color: var(--yellow);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+.experience-item .exp-place { color: #e6e6e6; font-size: 12px; }
