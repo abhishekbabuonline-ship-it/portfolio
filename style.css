@@ -2484,3 +2484,15 @@ img, video { display: block; max-width: 100%; }
 .hero-title { letter-spacing: -0.025em; line-height: 0.98; }
 .hero-title .char.space { width: 0.3em; }
 .hero-title .amp { margin-right: 0.18em; }
+
+/* tool tiles: static (no hover pop) and lighter boxes */
+.tool {
+    background: rgba(10, 10, 10, 0.22);
+    border-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: none;
+    cursor: default;
+    pointer-events: none;
+}
+.tool:hover { transform: none; border-color: rgba(255, 255, 255, 0.06); background: rgba(10, 10, 10, 0.22); }
