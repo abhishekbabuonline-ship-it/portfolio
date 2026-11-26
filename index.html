@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Babu — AI Motion Graphics Artist</title>
+    <meta name="description" content="Abhishek Babu — AI motion graphics artist crafting cinematic AI films, ads and motion design for brands.">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="is-loading">
+
+    <!-- ==================== INTRO LOADER ==================== -->
+    <div class="loader" aria-hidden="true">
+        <div class="loader-beam"></div>
+        <div class="loader-text">
+            <span class="loader-word">LIGHTS.</span>
+            <span class="loader-word">CAMERA.</span>
+            <span class="loader-word accent">AI.</span>
+        </div>
+        <div class="loader-count"><span id="loaderCount">0</span>%</div>
+    </div>
+
+    <!-- ==================== FX LAYERS ==================== -->
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="flashlight" aria-hidden="true"></div>
+    <div class="lights-hint" aria-hidden="true">LIGHTS OFF — MOVE TO EXPLORE</div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="navbar">
+        <a href="#home" class="nav-logo">ABHISHEK<span>.</span></a>
+
+        <nav class="nav-links">
+            <a href="#home"><i>01</i>Home</a>
+            <a href="#work"><i>02</i>Work</a>
+            <a href="#about"><i>03</i>About</a>
+            <a href="#contact"><i>04</i>Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="lights-toggle" aria-pressed="false" title="Lights off — explore with a spotlight">
+                <span class="switch"><i></i></span>
+                <em>LIGHTS</em>
+            </button>
+            <div class="nav-status">
+                <span class="rec-dot"></span> AVAILABLE FOR WORK
+            </div>
+        </div>
+
+        <button class="menu-toggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="home">
+
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg">
+                <source src="assets/hero-loop.mp4" type="video/mp4">
+            </video>
+            <div class="hero-shade"></div>
+            <div class="hero-spotlight"></div>
+            <div class="ai-badge hero-badge" title="You're watching AI-generated content">✦ AI-GENERATED VISUALS</div>
+            <div class="letterbox top" aria-hidden="true"></div>
+            <div class="letterbox bottom" aria-hidden="true"></div>
+
+            <!-- camera viewfinder frame -->
+            <div class="viewfinder" aria-hidden="true">
+                <span class="vf-corner tl"></span><span class="vf-corner tr"></span>
+                <span class="vf-corner bl"></span><span class="vf-corner br"></span>
+                <div class="vf-top"><span class="rec-dot"></span> REC <span id="timecode">00:00:00:00</span></div>
+                <div class="vf-bottom">4K • 24FPS • ISO 800 • f/1.8</div>
+            </div>
+
+            <div class="hero-content">
+                <p class="hero-small" data-scramble>ABHISHEK BABU</p>
+
+                <h1 class="hero-title">
+                    <span class="line"><span class="split">AI MOTION</span></span>
+                    <span class="line"><span class="split">GRAPHICS</span> <em class="serif">artist</em></span>
+                </h1>
+
+                <div class="hero-portfolio">
+                    <span class="outline">PORT</span>FOLIO<span class="dot">.</span>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-solid magnetic"><span>VIEW WORK</span></a>
+                    <a href="#contact" class="btn btn-ghost magnetic"><span>LET'S TALK</span></a>
+                </div>
+            </div>
+
+            <a href="#work" class="scroll-cue" aria-label="Scroll down">
+                <span>SCROLL</span>
+                <i></i>
+            </a>
+        </section>
+
+        <!-- ==================== MARQUEE ==================== -->
+        <section class="marquee-section" aria-hidden="true">
+            <div class="marquee-track">
+                <span>AI MOTION GRAPHICS</span><b>✦</b>
+                <span>CREATIVE DIRECTION</span><b>✦</b>
+                <span>AI FILMS</span><b>✦</b>
+                <span>VISUAL DESIGN</span><b>✦</b>
+                <span>AI MOTION GRAPHICS</span><b>✦</b>
+                <span>CREATIVE DIRECTION</span><b>✦</b>
+                <span>AI FILMS</span><b>✦</b>
+                <span>VISUAL DESIGN</span><b>✦</b>
+            </div>
+        </section>
+
+        <!-- ==================== HIGHLIGHTS (Apple-style bento) ==================== -->
+        <section class="highlights">
+            <h2 class="apple-head">Get the <span class="grad">highlights.</span></h2>
+
+            <div class="bento">
+                <div class="tile tile-hero">
+                    <img src="assets/hero-poster.jpg" alt="" class="tile-bg">
+                    <div class="tile-copy">
+                        <p class="tile-kicker">AI Films &amp; Motion</p>
+                        <div class="tile-num grad"><span data-count="15">0</span>+</div>
+                        <p>Cinematic pieces for brands like Milma, Pran and LOA.</p>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <p class="tile-kicker">Experience</p>
+                    <div class="tile-num"><span data-count="8">0</span>+ <small>yrs</small></div>
+                    <p>Design, motion &amp; film since 2018.</p>
+                </div>
+
+                <div class="tile tile-yellow">
+                    <p class="tile-kicker">Output</p>
+                    <div class="tile-num">4K</div>
+                    <p>Crisp, cinematic, campaign-ready.</p>
+                </div>
+
+                <div class="tile tile-wide">
+                    <p class="tile-kicker">The AI stack</p>
+                    <div class="tile-num"><span data-count="10">0</span>+ <small>tools</small></div>
+                    <div class="tile-ticker">
+                        <div>Higgsfield · Veo · Kling · Runway · Midjourney · Seedance · Google Flow · ChatGPT · Claude · Grok ·&nbsp;</div>
+                        <div>Higgsfield · Veo · Kling · Runway · Midjourney · Seedance · Google Flow · ChatGPT · Claude · Grok ·&nbsp;</div>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <p class="tile-kicker">Every format</p>
+                    <div class="formats">
+                        <span class="f169"></span><span class="f916"></span><span class="f11"></span>
+                    </div>
+                    <p>16:9 · 9:16 · 1:1 — one idea, every screen.</p>
+                </div>
+
+                <div class="tile">
+                    <p class="tile-kicker">Studios</p>
+                    <div class="tile-num"><span data-count="4">0</span></div>
+                    <p>Agencies &amp; teams across Kerala.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== MANIFESTO (lights up as you scroll) ==================== -->
+        <section class="manifesto">
+            <p class="eyebrow">THE IDEA</p>
+            <p class="manifesto-text">
+                I don't just edit videos. I direct <mark>light</mark>, <mark>motion</mark> and
+                <mark>machines</mark> to make brands <mark class="serif-mark">impossible</mark> to scroll past.
+            </p>
+        </section>
+
+        <!-- ==================== REEL (full-screen video shrinks into a frame) ==================== -->
+        <section class="reel" id="reel">
+            <div class="reel-sticky">
+                <h2 class="reel-title">The <span class="grad">reel.</span></h2>
+                <div class="reel-frame">
+                    <video class="reel-video" autoplay muted loop playsinline preload="metadata"
+                           poster="https://res.cloudinary.com/jzyi3q37/video/upload/so_1,q_auto,w_1600/v1791182144/Milma_Yogurt.jpg">
+                        <source src="https://res.cloudinary.com/jzyi3q37/video/upload/v1791182144/Milma_Yogurt.mp4" type="video/mp4">
+                    </video>
+                    <div class="ai-badge" title="You're watching AI-generated content">✦ AI-GENERATED</div>
+                    <button class="reel-play" data-open="ai-films:8">
+                        <span>▶</span> Watch with sound
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WORK ==================== -->
+        <section class="work-section section-padding" id="work">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow"><i>02</i> SELECTED WORK</p>
+                    <h2>CREATIVE<br><span>WORK<em class="serif">.</em></span></h2>
+                </div>
+                <p class="section-description">
+                    A selection of AI films, motion graphics, advertisements and
+                    creative visual work. Pick a reel — hit play.
+                </p>
+            </div>
+
+            <!-- FOLDERS (counts are filled in automatically from script.js) -->
+            <div class="folders">
+                <button class="folder-card active" data-folder="ai-films">
+                    <div class="folder-icon"></div>
+                    <div class="folder-name">AI FILMS</div>
+                    <div class="folder-count"></div>
+                </button>
+                <button class="folder-card" data-folder="motion">
+                    <div class="folder-icon"></div>
+                    <div class="folder-name">MOTION GRAPHICS</div>
+                    <div class="folder-count"></div>
+                </button>
+                <button class="folder-card" data-folder="ads">
+                    <div class="folder-icon"></div>
+                    <div class="folder-name">ADS</div>
+                    <div class="folder-count"></div>
+                </button>
+                <button class="folder-card" data-folder="creatives">
+                    <div class="folder-icon"></div>
+                    <div class="folder-name">CREATIVES</div>
+                    <div class="folder-count"></div>
+                </button>
+            </div>
+
+            <div class="folder-header">
+                <div>
+                    <p class="eyebrow">NOW SHOWING</p>
+                    <h3 class="folder-title">AI FILMS</h3>
+                </div>
+                <div class="folder-meta"><span id="folderMeta">12 REELS</span></div>
+            </div>
+
+            <!-- Project cards are rendered by script.js (edit the PROJECTS list there) -->
+            <div class="projects-grid" id="projectsGrid"></div>
+
+            <div class="empty-folder" id="emptyFolder">
+                <div class="empty-reel"><span></span></div>
+                <h3 id="emptyTitle">Ads</h3>
+                <p>In the edit bay. Coming soon.</p>
+            </div>
+        </section>
+
+        <!-- ==================== FILMSTRIP (filled from PROJECTS in script.js) ==================== -->
+        <section class="filmstrip" aria-hidden="true">
+            <div class="filmstrip-track" id="filmstripTrack"></div>
+        </section>
+
+        <!-- ==================== PROCESS ==================== -->
+        <section class="process-section section-padding">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PROCESS</p>
+                    <h2>FROM PROMPT<br><span>TO PREMIERE<em class="serif">.</em></span></h2>
+                </div>
+                <p class="section-description">
+                    Every film moves through the same five beats — part design studio,
+                    part film set, part machine.
+                </p>
+            </div>
+
+            <div class="process-track">
+                <div class="process-step">
+                    <span class="step-num">01</span>
+                    <h3>Concept</h3>
+                    <p>Brief, idea, script and the visual hook that stops the scroll.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-num">02</span>
+                    <h3>Prompt</h3>
+                    <p>Moodboards and prompt design to lock the look, light and characters.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-num">03</span>
+                    <h3>Generate</h3>
+                    <p>Frames and shots built across Higgsfield, Veo, Kling, Runway & more.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-num">04</span>
+                    <h3>Direct</h3>
+                    <p>Motion graphics, compositing and edit in After Effects & Premiere.</p>
+                </div>
+                <div class="process-step">
+                    <span class="step-num">05</span>
+                    <h3>Deliver</h3>
+                    <p>Sound, grade and every aspect ratio the campaign needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT ==================== -->
+        <section class="about-section section-padding" id="about">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow"><i>03</i> ABOUT ME</p>
+                    <h2>DESIGNER.<br><span>CREATOR<em class="serif">.</em></span></h2>
+                </div>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-portrait">
+                    <video autoplay muted loop playsinline preload="metadata" poster="assets/about-poster.jpg">
+                        <source src="assets/about-loop.mp4" type="video/mp4">
+                    </video>
+                    <div class="ai-badge" title="You're watching AI-generated content">✦ AI-GENERATED</div>
+                    <div class="portrait-tag">
+                        <span>ABHISHEK BABU</span>
+                        <span>MOTION / AI VISUALS</span>
+                    </div>
+                </div>
+
+                <div class="about-body">
+                    <p class="about-lead">
+                        I make brands <em class="serif">move</em> — blending design,
+                        motion and AI into visuals that feel cinematic and stick in memory.
+                    </p>
+
+                    <div class="about-text">
+                        <p>
+                            I’m a motion graphics designer and AI visual artist focused on
+                            creating engaging visual content for brands, campaigns and digital platforms.
+                        </p>
+                        <p>
+                            My work combines traditional design, motion graphics and emerging
+                            AI tools to create visuals that feel cinematic, modern and memorable.
+                        </p>
+                    </div>
+
+                    <div class="experience">
+                        <div class="experience-item">
+                            <span class="experience-year">2023 — NOW</span>
+                            <div>
+                                <h4>Stark Communications</h4>
+                                <p>Motion Graphics / AI Visuals</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <span class="experience-year">2022 — 2023</span>
+                            <div>
+                                <h4>The Viral Mafia</h4>
+                                <p>Calicut, Kerala</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <span class="experience-year">2018 — 2022</span>
+                            <div>
+                                <h4>Signfeo Technologies</h4>
+                                <p>Kerala</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <span class="experience-year">2018</span>
+                            <div>
+                                <h4>Advanced Graphic Designing &amp; Digital Film Making</h4>
+                                <p>Keltron Knowledge Centre, Mallappally</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TOOLKIT (video bg) ==================== -->
+        <section class="toolkit-section" id="toolkit">
+            <video class="toolkit-video" autoplay muted loop playsinline preload="metadata" poster="assets/toolkit-poster.jpg">
+                <source src="assets/toolkit-loop.mp4" type="video/mp4">
+            </video>
+            <div class="toolkit-shade"></div>
+            <div class="ai-badge scrub-badge" title="You're watching AI-generated content">✦ AI-GENERATED</div>
+
+            <div class="toolkit-inner section-padding">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">SOFTWARE</p>
+                        <h2>TOOLS I<br><span>USE<em class="serif">.</em></span></h2>
+                    </div>
+                </div>
+
+                <div class="software-grid">
+                    <div class="software-item" data-name="Photoshop"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"></div>
+                    <div class="software-item" data-name="Illustrator"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator"></div>
+                    <div class="software-item" data-name="After Effects"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" alt="After Effects"></div>
+                    <div class="software-item" data-name="Premiere Pro"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere Pro"></div>
+                    <div class="software-item" data-name="InDesign"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/indesign/indesign-plain.svg" alt="InDesign"></div>
+                    <div class="software-item" data-name="Lightroom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lightroom/lightroom-original.svg" alt="Lightroom"></div>
+                    <div class="software-item" data-name="Blender"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== AI TOOLS ==================== -->
+        <section class="ai-tools-section">
+            <div class="ai-tools-label">
+                <span>AI TOOLS</span>
+                <span>THE MACHINES BEHIND THE MAGIC</span>
+            </div>
+            <div class="ai-tools-marquee">
+                <div class="ai-tools-track">
+                    <span>HIGGSFIELD</span><i>✦</i>
+                    <span class="o">GOOGLE FLOW</span><i>✦</i>
+                    <span>RUNWAY</span><i>✦</i>
+                    <span class="o">CHATGPT</span><i>✦</i>
+                    <span>CLAUDE</span><i>✦</i>
+                    <span class="o">VEO</span><i>✦</i>
+                    <span>KLING AI</span><i>✦</i>
+                    <span class="o">MIDJOURNEY</span><i>✦</i>
+                    <span>SEEDANCE</span><i>✦</i>
+                    <span class="o">GROK</span><i>✦</i>
+                    <span>HIGGSFIELD</span><i>✦</i>
+                    <span class="o">GOOGLE FLOW</span><i>✦</i>
+                    <span>RUNWAY</span><i>✦</i>
+                    <span class="o">CHATGPT</span><i>✦</i>
+                    <span>CLAUDE</span><i>✦</i>
+                    <span class="o">VEO</span><i>✦</i>
+                    <span>KLING AI</span><i>✦</i>
+                    <span class="o">MIDJOURNEY</span><i>✦</i>
+                    <span>SEEDANCE</span><i>✦</i>
+                    <span class="o">GROK</span><i>✦</i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS ==================== -->
+        <section class="skills-section section-padding">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EXPERTISE</p>
+                    <h2>WHAT I<br><span>DO<em class="serif">.</em></span></h2>
+                </div>
+                <p class="section-description">Hover a line.</p>
+            </div>
+
+            <div class="skills-list">
+                <!-- data-p = which project thumbnail floats beside the cursor: "folder:index" -->
+                <div class="skill-item" data-p="motion:0"><span>01</span><h3>Motion Graphics</h3><b>→</b></div>
+                <div class="skill-item" data-p="ai-films:4"><span>02</span><h3>AI Visuals</h3><b>→</b></div>
+                <div class="skill-item" data-p="ai-films:1"><span>03</span><h3>Creative Ads</h3><b>→</b></div>
+                <div class="skill-item" data-p="ai-films:3"><span>04</span><h3>Troll Video Ads</h3><b>→</b></div>
+                <div class="skill-item" data-p="ai-films:2"><span>05</span><h3>Logo Design</h3><b>→</b></div>
+                <div class="skill-item" data-p="ai-films:11"><span>06</span><h3>Branding Design</h3><b>→</b></div>
+                <div class="skill-item" data-p="ai-films:6"><span>07</span><h3>Digital Painting</h3><b>→</b></div>
+                <div class="skill-item" data-p="ai-films:0"><span>08</span><h3>Creative Direction</h3><b>→</b></div>
+            </div>
+            <div class="skill-preview" aria-hidden="true"><img alt=""></div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="contact-glow" aria-hidden="true"></div>
+
+            <div class="contact-content">
+                <p class="eyebrow"><i>04</i> LET'S CREATE</p>
+
+                <h2>
+                    HAVE A PROJECT<br>
+                    <span>IN MIND<em class="serif">?</em></span>
+                </h2>
+
+                <!-- TODO: replace with your real email -->
+                <a class="contact-orb magnetic" href="mailto:abhishek@example.com">
+                    <svg class="orb-ring" viewBox="0 0 200 200" aria-hidden="true">
+                        <defs><path id="orbPath" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+                        <text><textPath href="#orbPath">LET'S CREATE ✦ AI FILMS ✦ MOTION ✦ IDEAS ✦ </textPath></text>
+                    </svg>
+                    <span>LET'S<br>TALK →</span>
+                </a>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/abhiyeeeeey" target="_blank" rel="noopener noreferrer">Instagram <b>↗</b></a>
+                    <a href="https://www.behance.net/_abhishekbabu_" target="_blank" rel="noopener noreferrer">Behance <b>↗</b></a>
+                    <a href="https://www.linkedin.com/in/abhishek-babu-19922a253/" target="_blank" rel="noopener noreferrer">LinkedIn <b>↗</b></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== BIG CONTACT MARQUEE ==================== -->
+    <a href="mailto:abhishek@example.com" class="cta-marquee" aria-label="Email Abhishek">
+        <div class="cta-track">
+            <span>LET'S MAKE SOMETHING</span><em class="serif">cinematic</em><b>✦</b>
+            <span>LET'S MAKE SOMETHING</span><em class="serif">cinematic</em><b>✦</b>
+            <span>LET'S MAKE SOMETHING</span><em class="serif">cinematic</em><b>✦</b>
+            <span>LET'S MAKE SOMETHING</span><em class="serif">cinematic</em><b>✦</b>
+        </div>
+    </a>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-big" aria-hidden="true">ABHISHEK<span>.</span></div>
+        <div class="footer-row">
+            <div>© <span id="year"></span> ABHISHEK BABU</div>
+            <div id="localTime">KERALA — --:--</div>
+            <a href="#home" class="back-top">BACK TO TOP ↑</a>
+        </div>
+    </footer>
+
+    <!-- ==================== LIGHTBOX ==================== -->
+    <div class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close">CLOSE ✕</button>
+        <button class="lb-nav lb-prev" aria-label="Previous video">←</button>
+        <div class="lightbox-stage"></div>
+        <button class="lb-nav lb-next" aria-label="Next video">→</button>
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
