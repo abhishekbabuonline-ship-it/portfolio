@@ -2601,3 +2601,8 @@ img, video { display: block; max-width: 100%; }
 @media (max-width: 700px) {
     .contact-content h2.contact-title { font-size: clamp(38px, 12.6vw, 90px); }
 }
+
+/* Tools heading: TOOLS yellow, I USE white, clear word gaps */
+.section-heading h2.tools-title { color: #fff; word-spacing: 0.22em; letter-spacing: -0.04em; }
+.section-heading h2.tools-title span { color: var(--yellow); }
+.section-heading h2.tools-title .serif { color: var(--yellow); }
