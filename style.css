@@ -2637,3 +2637,4 @@ img, video { display: block; max-width: 100%; }
     .lr-icon { width: 68px; height: 68px; border-radius: 20px; }
     .lr-icon svg { width: 34px; height: 34px; }
 }
+.toolkit-video { opacity: 0.13; }
