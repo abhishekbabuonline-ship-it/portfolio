@@ -2262,3 +2262,48 @@ img, video { display: block; max-width: 100%; }
     .lb-next { right: 16px; }
     .lightbox-caption { flex-direction: column; align-items: center; gap: 4px; text-align: center; padding: 0 70px; }
 }
+
+
+/* =========================================================
+   HERO — new headline + serif "Portfolio"
+========================================================= */
+
+.hero-content { width: 66%; }
+
+.hero-title { font-size: clamp(40px, 5vw, 86px); line-height: 0.92; }
+
+.line:nth-child(3) .char { transition-delay: calc(1.1s + var(--i) * 0.035s); }
+
+.hero-title .amp {
+    color: var(--yellow);
+    font-size: 1.05em;
+    margin-right: 0.05em;
+    transition-delay: 1.1s;
+}
+
+.hero-portfolio {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+    font-size: clamp(72px, 11vw, 190px);
+    margin-top: 14px;
+    background: linear-gradient(100deg, #fff6b0 0%, #ffde00 40%, #ffb800 75%, #ff8a00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-right: 0.08em;        /* keep the italic tail inside the gradient */
+}
+
+.hero-portfolio .dot {
+    -webkit-text-fill-color: #fff;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .hero-content { width: 100%; }
+    .hero-title { font-size: clamp(26px, 7.6vw, 56px); }
+    .hero-portfolio { font-size: clamp(64px, 22vw, 120px); }
+}
