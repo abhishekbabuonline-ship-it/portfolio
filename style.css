@@ -2638,3 +2638,11 @@ img, video { display: block; max-width: 100%; }
     .lr-icon svg { width: 34px; height: 34px; }
 }
 .toolkit-video { opacity: 0.13; }
+
+/* folder category icons */
+.cat-icon { width: 46px; height: 46px; transition: transform 0.5s var(--ease); }
+.cat-icon svg { width: 100%; height: 100%; display: block; }
+.folder-card:hover .cat-icon { transform: translateY(-4px) rotate(-6deg); }
+.folder-card.active .cat-icon { transform: scale(1.05); }
+@media (max-width: 700px) { .cat-icon { width: 36px; height: 36px; } }
+@media (min-width: 701px) { .cat-icon { width: 58px; height: 58px; } }
