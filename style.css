@@ -2307,3 +2307,18 @@ img, video { display: block; max-width: 100%; }
     .hero-title { font-size: clamp(26px, 7.6vw, 56px); }
     .hero-portfolio { font-size: clamp(64px, 22vw, 120px); }
 }
+
+/* Vimeo fallback inside the reel frame — fills the frame like object-fit: cover */
+.reel-vimeo { position: absolute; inset: 0; overflow: hidden; background: #000; }
+.reel-vimeo iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;          /* 16:9 */
+    min-height: 100vh;
+    min-width: 177.78vh;
+    transform: translate(-50%, -50%);
+    border: 0;
+    pointer-events: none;
+}

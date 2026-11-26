@@ -799,3 +799,33 @@ document.querySelectorAll(".tile").forEach((t) => {
         t.style.setProperty("--ty", `${e.clientY - r.top}px`);
     });
 });
+
+
+/* ---------- REEL FALLBACK — if the mp4 doesn't load, play the Vimeo version ---------- */
+
+(function reelFallback() {
+    const frame = document.querySelector(".reel-frame");
+    const video = frame && frame.querySelector(".reel-video");
+    const btn = frame && frame.querySelector(".reel-play");
+    if (!video || !btn) return;
+
+    const [folder, idx] = btn.dataset.open.split(":");
+    const proj = (PROJECTS[folder] || [])[+idx];
+    if (!proj || !proj.vimeo) return;
+
+    let swapped = false;
+    const swap = () => {
+        if (swapped || video.readyState >= 2) return;
+        swapped = true;
+        const wrap = document.createElement("div");
+        wrap.className = "reel-vimeo";
+        wrap.innerHTML = `<iframe src="${vimeoUrl(proj, "background=1&autoplay=1&muted=1&loop=1&autopause=0")}"
+                            allow="autoplay; fullscreen" frameborder="0" tabindex="-1" title="${proj.title}"></iframe>`;
+        video.replaceWith(wrap);
+    };
+
+    const src = video.querySelector("source");
+    if (src) src.addEventListener("error", swap);
+    video.addEventListener("error", swap);
+    setTimeout(swap, 4000);          // nothing playable after 4s → use Vimeo
+})();
