@@ -2606,3 +2606,6 @@ img, video { display: block; max-width: 100%; }
 .section-heading h2.tools-title { color: #fff; word-spacing: 0.22em; letter-spacing: -0.04em; }
 .section-heading h2.tools-title span { color: var(--yellow); }
 .section-heading h2.tools-title .serif { color: var(--yellow); }
+
+/* Tools background video — half as visible */
+.toolkit-video { opacity: 0.27; }
