@@ -829,3 +829,27 @@ document.querySelectorAll(".tile").forEach((t) => {
     video.addEventListener("error", swap);
     setTimeout(swap, 4000);          // nothing playable after 4s → use Vimeo
 })();
+
+
+/* ---------- FOOTER NAME — spotlight glow follows the cursor ---------- */
+
+(function footerGlow() {
+    const name = document.querySelector(".footer-big");
+    if (!name) return;
+    const move = (x, y) => {
+        const r = name.getBoundingClientRect();
+        name.style.setProperty("--fx", `${x - r.left}px`);
+        name.style.setProperty("--fy", `${y - r.top}px`);
+    };
+    name.addEventListener("mousemove", (e) => { move(e.clientX, e.clientY); name.classList.add("lit"); });
+    name.addEventListener("mouseleave", () => {
+        name.style.setProperty("--fx", "-500px");
+        name.classList.remove("lit");
+    });
+    /* phones: glow follows the finger */
+    name.addEventListener("touchmove", (e) => {
+        const t = e.touches[0];
+        if (t) { move(t.clientX, t.clientY); name.classList.add("lit"); }
+    }, { passive: true });
+    name.addEventListener("touchend", () => name.classList.remove("lit"));
+})();
