@@ -2322,3 +2322,20 @@ img, video { display: block; max-width: 100%; }
     border: 0;
     pointer-events: none;
 }
+
+
+/* About — no portrait: intro left, experience right */
+.about-grid { grid-template-columns: 1fr; }
+.about-body {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    column-gap: 80px;
+    align-items: start;
+}
+.about-body .about-lead { grid-column: 1 / -1; max-width: 1100px; }
+.about-body .experience { margin-top: 0; }
+
+@media (max-width: 1000px) {
+    .about-body { grid-template-columns: 1fr; }
+    .about-body .experience { margin-top: 40px; }
+}
